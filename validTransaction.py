@@ -1,7 +1,6 @@
 def insert_data(input, dict1): 
-    with open(input) as f:
-        line = f.readline()
-		# Considering that each line of input is a json string
+    for line in input:
+	# Considering that each line of input is a json string
         trx_id = json.loads(line)['trx_id'] #loads() is used to convert the JSON String document into the Python dictionary.
         if trx_id not in dict1.keys():
             print("Unique")
